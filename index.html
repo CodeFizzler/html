@@ -1,0 +1,156 @@
+<!--Created By ProGamer | Sibgat-->
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Atspire</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div id="intro">
+        Atspire
+        <div class="iamowner">
+        </div>
+    </div>
+<!--
+<input type="radio" name="m" ><label class="m"><i class="fa fa-male" aria-hidden="true"></i></label>
+<input type="radio" name="m" ><label class="f"><i class="fa fa-female" aria-hidden="true"></i></label>
+-->
+<audio id="audioa" src="https://firebasestorage.googleapis.com/v0/b/chatbot-76792.appspot.com/o/siundeffecd548Ringtone.mp3?alt=media&token=531c43ed-7dcb-4c61-bf65-bd6d936af099" ></audio>
+<audio id="audiob" src="https://firebasestorage.googleapis.com/v0/b/chatbot-76792.appspot.com/o/QKTA234-pop.mp3?alt=media&token=fd2fe59b-e01c-4544-9eda-09a6c7355d23" ></audio>
+<center>
+<h1>Loading Live Chat  <i class="fas fa-spinner fa-pulse"></i>
+    </h1>
+</center>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  
+<div id="footer" ><p>Connecting<i class="fas fa-spinner fa-pulse"></i></p>
+<div id="ad" ></div><div id="paste"><div id="clr" >Clear</div><select id="palet" >
+  
+<option>#FF4E50</option>
+<option>#0269A4</option>
+<option>#00B4AB</option>
+<option>#FFD832</option>
+<option>#12A4D9</option>
+<option>#F34F1C</option>
+<option>#7FBC00</option>
+<option>#FF441A</option>
+<option>#747474</option>
+<option>Circle</option>
+<option>Square</option>
+<option>Eraser</option>
+</select>
+<select id="si" >
+<option>5</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>15</option>
+<option>20</option>
+<option>30</option>
+<option>50</option>
+<option>100</option>
+<option>500</option>
+<option>200</option>
+<option>1000</option>
+</select>
+</div></div>
+<div id="chatscrn" ng-app="">
+<span onclick="scr();tog()" id="ll"><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+<canvas ontouchstart="typee();jt(event);"id="can"  >
+</canvas>
+<div id="status" >
+Typing....
+</div>
+</div>
+<textarea  onkeyup="typee();style.width='56%';if(this.value==''){style.width='78%'}"   id="contentfield" placeholder="Type here"></textarea>
+<div  onclick="tgg()"class="medialog" onmousedown="pr(event)">+</div>
+<div  id="imgslct" ><i class='fas fa-image' style='font-size:24px'></i></div>
+<div id="klo" >
+<button onmousedown="pr(event)" onclick="update();onrec();scr();"  id="snd" ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+<br>
+<input id="name"  placeholder="Type Your Name" >
+<br>
+</div>
+<div id="zoom" >
+<div id="cont" >
+<img id="imagezoom" >
+</div>
+<div id="acc" >
+    <div id="setlg" ><i class="fa fa-cog" aria-hidden="true"></i>
+    <table cellpadding="10"  cellspacing="0" >
+    <tr>
+    <th>
+    Account
+    </th>
+    </tr>
+    <tr>
+    <td><i class="fas fa-edit"></i> Edit Profile
+    </td>
+    </tr>
+    <tr>
+    <td><i class="fas fa-share"></i> Share Profile</td>
+    </tr>
+    <tr>
+    <td><i class="fas fa-key"></i> Change Password</td>
+    </tr>
+    <tr>
+    <th>
+    Setting
+    </th>
+    </tr>
+    <tr>
+    <td><i class="fa fa-edit"></i> Change Theme
+    </td>
+    </tr>
+    <tr>
+    <td><i class='fas fa-bullhorn'></i> Promotion
+    </td>
+    <tr>
+    <td><i class="fa fa-lock" aria-hidden="true"></i> Privacy
+    </td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-rocket" aria-hidden="true"></i> Get Impulse Pack
+        </td>
+    </tr>
+    <tr>
+    <td><i class="fas fa-sign-out-alt"></i> Logout
+    </td>
+    </tr>
+    </table>
+    </div>
+   <div id="imgviewer" >
+       <div class="imgexit" onclick="document.getElementById('imgviewer').style.display='none'">
+           <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <img  id="imgupload" >
+        <div id="progressbar" >
+            <div class="cha" >
+                <div class="chb" id="chb"></div><label class="lba">0%</label>
+            </div>
+        </div>
+        <button id="upl"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+    <script type='text/javascript' src='config.js'></script>
+<script src="main.js">
+</script>
+</body>
+</html>
